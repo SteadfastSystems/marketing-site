@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steadfast Systems | Building Reliable Software Solutions</title>
+    <meta name="description" content="Steadfast Systems builds reliable, scalable software solutions for businesses. Expert development services focused on quality and long-term success.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2c5282;
+            --accent: #3182ce;
+            --text: #2d3748;
+            --text-light: #718096;
+            --background: #ffffff;
+            --background-alt: #f7fafc;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--background);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 16px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.9);
+            margin-left: 32px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 160px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        section:nth-child(even) {
+            background: var(--background-alt);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+
+        /* About */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+        }
+
+        /* Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            counter-reset: step;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .process-step::before {
+            counter-increment: step;
+            content: counter(step);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+        }
+
+        .process-step h3 {
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Why Us */
+        .benefits-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .benefit-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-right: 16px;
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        .benefit-item h4 {
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .benefit-item p {
+            color: var(--text-light);
+        }
+
+        /* Contact */
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            margin-top: 32px;
+        }
+
+        .contact-info p {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .contact-email {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.8);
+            padding: 32px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            nav {
+                display: none;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Steadfast Systems</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Steadfast Systems</h1>
+            <p>Building reliable software solutions that stand the test of time. We partner with businesses to create technology that drives growth.</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-subtitle">Dedicated to delivering dependable software solutions</p>
+            <div class="about-content">
+                <p>Steadfast Systems is a software development company focused on building robust, scalable applications for businesses. We believe in creating technology solutions that are reliable, maintainable, and designed for long-term success. Our team combines technical expertise with a commitment to understanding your business needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">What We Build</h2>
+            <p class="section-subtitle">Comprehensive software development services tailored to your needs</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Custom Software Development</h3>
+                    <p>Purpose-built applications designed to solve your specific business challenges and streamline operations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Web Applications</h3>
+                    <p>Modern, responsive web applications that deliver exceptional user experiences across all devices.</p>
+                </div>
+                <div class="service-card">
+                    <h3>API Development & Integration</h3>
+                    <p>Robust APIs and seamless integrations that connect your systems and enable data flow.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and applications built on AWS and other leading platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process">
+        <div class="container">
+            <h2 class="section-title">How We Work</h2>
+            <p class="section-subtitle">A proven process for delivering successful projects</p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <h3>Discover</h3>
+                    <p>We start by understanding your goals, challenges, and requirements through collaborative discussions.</p>
+                </div>
+                <div class="process-step">
+                    <h3>Design</h3>
+                    <p>We architect solutions that are scalable, maintainable, and aligned with your business objectives.</p>
+                </div>
+                <div class="process-step">
+                    <h3>Develop</h3>
+                    <p>We build with modern technologies and best practices, keeping you informed throughout the process.</p>
+                </div>
+                <div class="process-step">
+                    <h3>Deliver</h3>
+                    <p>We deploy, test thoroughly, and provide ongoing support to ensure long-term success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why">
+        <div class="container">
+            <h2 class="section-title">Why Steadfast Systems</h2>
+            <p class="section-subtitle">What sets us apart from other development partners</p>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">&#10003;</div>
+                    <div>
+                        <h4>Reliability First</h4>
+                        <p>We build software that works consistently and stands up to real-world demands.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">&#10003;</div>
+                    <div>
+                        <h4>Transparent Communication</h4>
+                        <p>Clear, honest communication throughout every project with no surprises.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">&#10003;</div>
+                    <div>
+                        <h4>Long-term Partnership</h4>
+                        <p>We're invested in your success and build relationships that last beyond individual projects.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">&#10003;</div>
+                    <div>
+                        <h4>Technical Excellence</h4>
+                        <p>Modern technologies and industry best practices ensure quality and maintainability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Ready to discuss your project? We'd love to hear from you.</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Email us at:</p>
+                    <a href="mailto:contact@steadfastsystems.io" class="contact-email">contact@steadfastsystems.io</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Steadfast Systems. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
