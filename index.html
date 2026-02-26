@@ -310,6 +310,61 @@
             height: auto;
         }
 
+        /* Bastion Section */
+        #bastion {
+            background: #0A0A1A !important;
+            border-top: 2px solid #00C2FF22;
+            border-bottom: 2px solid #7B2CBF22;
+        }
+
+        #bastion .section-title {
+            background: linear-gradient(135deg, #00C2FF, #7B2CBF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        #bastion .section-subtitle {
+            color: #cce8f0;
+        }
+
+        #bastion .about-content p {
+            color: #E0F7FA;
+        }
+
+        #bastion .service-card {
+            background: #13132B;
+            border: 1px solid #00C2FF22;
+        }
+
+        #bastion .service-card h3 {
+            color: #00C2FF;
+        }
+
+        #bastion .service-card p {
+            color: #cce8f0;
+        }
+
+        .bastion-cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00C2FF, #7B2CBF);
+            color: white !important;
+            padding: 14px 36px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(0, 194, 255, 0.25);
+        }
+
+        .bastion-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 194, 255, 0.4);
+            text-decoration: none;
+        }
+
         /* Footer */
         footer {
             background: var(--primary);
@@ -359,7 +414,7 @@
             <nav>
                 <a href="#about">About</a>
                 <a href="#services">Solutions</a>
-                <a href="#nexus">Nexus</a>
+                <a href="#bastion">Bastion</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -404,17 +459,17 @@
         </div>
     </section>
 
-    <section id="nexus" style="background: var(--background);">
+    <section id="bastion">
         <div class="container">
-            <h2 class="section-title">Flagship Product: Nexus</h2>
-            <p class="section-subtitle">Privacy-first AI business intelligence system</p>
+            <h2 class="section-title">Flagship Product: Bastion</h2>
+            <p class="section-subtitle">Privacy-first AI platform built for small businesses</p>
             <div style="text-align: center; margin: 32px 0;">
-                <a href="https://nexus.steadfastsystems.io" target="_blank" rel="noopener noreferrer">
-                    <img src="logo_large_cropped.png" alt="Nexus Logo" style="max-width: 180px; height: auto; border-radius: 22%; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 4px 16px rgba(0,0,0,0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.15)';">
+                <a href="https://bastion.steadfastsystems.io" target="_blank" rel="noopener noreferrer">
+                    <img src="bastion_icon.png" alt="Bastion Logo" style="max-width: 120px; height: auto; border-radius: 22%; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(0,194,255,0.25);" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 32px rgba(0,194,255,0.45)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 24px rgba(0,194,255,0.25)';">
                 </a>
             </div>
             <div class="about-content" style="margin-bottom: 48px;">
-                <p style="margin-bottom: 24px;">Nexus is our advanced RAG-chat system that privately that allows your business to privately interact with your database, unstructured documents, and audio and structured documents to provide intelligent insights and retrieval - 100% locally.</p>
+                <p style="margin-bottom: 24px;">Bastion is our privacy-first AI platform built for small businesses. Chat with your data — documents, audio, and files — completely locally. No cloud, no leaks, no subscriptions to third-party AI.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -431,10 +486,13 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 32px;">
-                <p style="color: var(--text-light); max-width: 700px; margin: 0 auto;">Use cases: Meeting transcription, interview analysis, voice notes with AI recall, and team knowledge bases.</p>
+                <p style="color: #cce8f0; max-width: 700px; margin: 0 auto;">Use cases: Meeting transcription, interview analysis, voice notes with AI recall, and team knowledge bases.</p>
             </div>
             <div style="text-align: center; margin-top: 48px;">
-                <p style="color: var(--text); font-size: 1.1rem;">Have early access? <a href="https://nexus.steadfastsystems.io" target="_blank" rel="noopener noreferrer">Launch Nexus</a></p>
+                <a href="https://bastion.steadfastsystems.io" target="_blank" rel="noopener noreferrer" class="bastion-cta-button">Launch Bastion</a>
+            </div>
+            <div style="text-align: center; margin-top: 24px;">
+                <p style="color: #E0F7FA; font-size: 1.0rem;">Have early access? <a href="https://bastion.steadfastsystems.io" target="_blank" rel="noopener noreferrer" style="color: #00C2FF;">Sign in here</a></p>
             </div>
         </div>
     </section>
